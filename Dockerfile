@@ -7,8 +7,8 @@ RUN apt-add-repository ppa:ansible/ansible
 RUN apt-get update
 RUN apt-get -y install ansible
 RUN apt-get -y install python3-pip python3-dev
-RUN /usr/bin/pip3 install -U pip wheel setuptools
-RUN /usr/bin/pip3 install https://github.com/willthames/ansible-lint/archive/master.zip
+RUN /usr/bin/pip3 install -U pip wheel setuptools ansible-lint
+
 RUN apt-get -y install rubygems-integration
 RUN gem install serverspec
 RUN gem install rake

@@ -1,14 +1,19 @@
 ---
 
 - name: Install list of packages
-  action: apt pkg={{item}} state=installed
+  apt: 
+    name:
+      - apache2
+    state: present
   with_items:
-  - apache2
+  
 
 - name: Create directory /run/lock for apache2
-  file: path=/run/lock state=directory
+  file: 
+    path: /run/lock 
+    state: directory
 
 - name: Start services
-  action: service name={{item}} state=started
-  with_items:
-  - apache2
+  systemd: 
+    name: httpd.service
+    state: started

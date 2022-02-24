@@ -11,8 +11,8 @@ RUN apt-get -y install python3-pip python3-dev
 RUN /usr/bin/pip3 install -U pip wheel setuptools ansible ansible-lint
 
 RUN apt-get -y install rubygems-integration
-RUN gem install serverspec
-RUN gem install rake
+RUN /usr/bin/gem install serverspec
+RUN /usr/bin/gem install rake
 
 # Required for Docker jenkins plugin
 RUN apt-get -y install openssh-server

@@ -6,7 +6,7 @@ RUN apt-get -y install software-properties-common
 RUN apt-add-repository ppa:ansible/ansible
 
 RUN apt-get update
-RUN apt-get -y install python3-pip python3-dev
+RUN apt-get -y install git python3-pip python3-dev
 
 RUN /usr/bin/pip3 install -U pip wheel setuptools ansible ansible-lint
 

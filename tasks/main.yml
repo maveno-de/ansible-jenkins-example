@@ -5,8 +5,6 @@
     name:
       - apache2
     state: present
-  with_items:
-  
 
 - name: Create directory /run/lock for apache2
   file: 

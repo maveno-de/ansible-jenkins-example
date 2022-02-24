@@ -3,4 +3,4 @@
 - hosts: 127.0.0.1
   tasks:
     
-    include_tasks: main.yml
+    - include_tasks: main.yml

@@ -10,7 +10,7 @@ RUN apt-get -y install python3-pip python3-dev
 
 RUN /usr/bin/pip3 install -U pip wheel setuptools ansible ansible-lint
 
-RUN apt-get -y install rubygems-integration
+RUN apt-get -y install rubygems-integration bundler
 RUN /usr/bin/gem install serverspec
 RUN /usr/bin/gem install rake
 
